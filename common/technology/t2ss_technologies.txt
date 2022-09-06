@@ -1,0 +1,1019 @@
+######################
+### TECH COSTS ###
+######################
+@t2ss_tier1cost4 = 3318.4
+@t2ss_tier2cost4 = 6636
+@t2ss_tier3cost4 = 13272
+@t2ss_tier3cost5 = 18960
+@t2ss_tier4cost4 = 26544
+@t2ss_tier5cost1 = 36024
+@t2ss_tier5cost2 = 41712
+@t2ss_tier5cost3 = 47400
+@t2ss_tier5cost4 = 53088
+@t2ss_tier6cost1 = 104880
+@t2ss_tier6cost2 = 76800
+@t2ss_tier6cost3 = 81600
+@t2ss_tier6cost4 = 86400
+@t2ss_tier7cost1 = 109440
+@t2ss_tier7cost2 = 115200
+@t2ss_tier7cost3 = 120960
+@t2ss_tier7cost4 = 126720
+@t2ss_tier7cost5 = 132480
+@t2ss_tier7cost6 = 192000
+@t2ss_tier7cost7 = 211200
+@t2ss_tier7cost8 = 249600
+@t2ss_tier7cost9 = 307200
+@t2ss_tier7cost10 = 364800
+@t2ss_tier7cost11 = 422400
+@t2ss_tier7cost12 = 480000
+# TECH WEIGHTS
+@t2ss_tier1weight1 = 100
+@t2ss_tier1weight2 = 95
+@t2ss_tier1weight3 = 90
+@t2ss_tier2weight1 = 85
+@t2ss_tier2weight2 = 75
+@t2ss_tier2weight3 = 70
+@t2ss_tier3weight1 = 65
+@t2ss_tier3weight2 = 60
+@t2ss_tier3weight3 = 50
+@t2ss_tier4weight1 = 45
+@t2ss_tier4weight2 = 40
+@t2ss_tier4weight3 = 35
+@t2ss_tier5weight1 = 30
+@t2ss_tier5weight2 = 25
+@t2ss_tier5weight3 = 20
+@t2ss_tier6weight1 = 19
+@t2ss_tier6weight2 = 18
+@t2ss_tier6weight3 = 17
+@t2ss_tier7weight1 = 16
+@t2ss_tier7weight2 = 15
+@t2ss_tier7weight3 = 14
+@t2ss_tier8weight1 = 13
+@t2ss_tier8weight2 = 12
+@t2ss_tier8weight3 = 11
+
+
+tech_t2ss_tech2_ships_1 = {
+	cost = @t2ss_tier5cost2
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	prerequisites = { "tech_Battlecruiser_1" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	weight = @t2ss_tier3weight1
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_TECH2_SHIPS_TITLE"
+			desc = "TECH_UNLOCK_T2SS_TECH2_SHIPS_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			any_neighbor_country = { has_technology = tech_t2ss_tech2_ships_1 }
+		}
+	}
+	ai_weight = {
+		factor = 100
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_tech2_ships_1
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_t2ss_tech3_ships_1 = {
+	cost = @t2ss_tier6cost2
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_tech2_ships_1" "tech_t2ss_command_battleship_1" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	weight = @t2ss_tier5weight1
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_TECH3_SHIPS_TITLE"
+			desc = "TECH_UNLOCK_T2SS_TECH3_SHIPS_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			any_neighbor_country = { has_technology = tech_t2ss_tech3_ships_1 }
+		}
+	}
+	ai_weight = {
+		factor = 100
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_tech3_ships_1
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_t2ss_tech4_ships_1 = {
+	cost = @t2ss_tier7cost1
+	area = engineering
+	tier = 6
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_tech3_ships_1" "tech_t2ss_command_titan_1" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	weight = @t2ss_tier5weight1
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_TECH4_SHIPS_TITLE"
+			desc = "TECH_UNLOCK_T2SS_TECH4_SHIPS_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			any_neighbor_country = { has_technology = tech_t2ss_tech4_ships_1 }
+		}
+	}
+	ai_weight = {
+		factor = 100
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_tech4_ships_1
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+#####################
+### SHIP SECTIONS ###
+#####################
+##Assault Corvette
+tech_t2ss_assault_corvette_1 = {
+	tier = 3
+	weight = @t2ss_tier3weight2
+	cost = @t2ss_tier4cost4
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_tech2_ships_1" "tech_corvettes" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_ASSAULT_CORVETTE_TITLE"
+			desc = "TECH_UNLOCK_T2SS_ASSAULT_CORVETTE_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_t2ss_assault_corvette_1 }
+		}
+	}
+	ai_weight = {
+		factor = 10000
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_assault_corvette_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Command Destroyer
+tech_t2ss_command_destroyer_1 = {
+	tier = 3
+	weight = @t2ss_tier3weight3
+	cost = @t2ss_tier5cost1
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_assault_corvette_1" "tech_destroyers" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_COMMAND_DESTROYER_TITLE"
+			desc = "TECH_UNLOCK_T2SS_COMMAND_DESTROYER_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_t2ss_command_destroyer_1 }
+		}
+	}
+	ai_weight = {
+		factor = 10000
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_command_destroyer_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Heavy Assault Cruiser
+tech_t2ss_heavy_assault_cruiser_1 = {
+	tier = 4
+	weight = @t2ss_tier4weight1
+	cost = @t2ss_tier5cost2
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_command_destroyer_1" "tech_cruisers" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_HEAVY_ASSAULT_CRUISER_TITLE"
+			desc = "TECH_UNLOCK_T2SS_HEAVY_ASSAULT_CRUISER_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_t2ss_heavy_assault_cruiser_1 }
+		}
+	}
+	ai_weight = {
+		factor = 10000
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_heavy_assault_cruiser_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Assault Escort Carrier
+tech_t2ss_assault_escort_carrier_1 = {
+	tier = 4
+	weight = @t2ss_tier4weight2
+	cost = @t2ss_tier5cost3
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_heavy_assault_cruiser_1" "tech_escortcarrier_1" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_ASSAULT_ESCORT_CARRIER_TITLE"
+			desc = "TECH_UNLOCK_T2SS_ASSAULT_ESCORT_CARRIER_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_t2ss_assault_escort_carrier_1 }
+		}
+	}
+	ai_weight = {
+		factor = 10000
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_assault_escort_carrier_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Force Recon Cruiser
+tech_t2ss_force_recon_cruiser_1 = {
+	tier = 4
+	weight = @t2ss_tier4weight3
+	cost = @t2ss_tier5cost4
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_assault_escort_carrier_1" "tech_StrikeCruiser_1" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_FORCE_RECON_CRUISER_TITLE"
+			desc = "TECH_UNLOCK_T2SS_FORCE_RECON_CRUISER_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { 
+				has_technology = tech_t2ss_force_recon_cruiser_1 
+			}
+		}
+	}
+	ai_weight = {
+		factor = 10000
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_force_recon_cruiser_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Command Battlecruiser
+tech_t2ss_command_battlecruiser_1 = {
+	tier = 5
+	weight = @t2ss_tier4weight3
+	cost = @t2ss_tier6cost1
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" "tech_Battlecruiser_1" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_COMMAND_BATTLECRUISER_TITLE"
+			desc = "TECH_UNLOCK_T2SS_COMMAND_BATTLECRUISER_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { 
+				has_technology = tech_t2ss_command_battlecruiser_1 
+			}
+		}
+	}
+	ai_weight = {
+		factor = 10000
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_command_battlecruiser_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Command Battleship
+tech_t2ss_command_battleship_1 = {
+	tier = 5
+	weight = @t2ss_tier4weight3
+	cost = @t2ss_tier6cost2
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_command_battlecruiser_1" "tech_battleships" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_COMMAND_BATTLESHIP_TITLE"
+			desc = "TECH_UNLOCK_T2SS_COMMAND_BATTLESHIP_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { 
+				has_technology = tech_t2ss_command_battleship_1 
+			}
+		}
+	}
+	ai_weight = {
+		factor = 10000
+		modifier = {
+			factor = 1.1
+			any_neighbor_country = {
+				has_technology = tech_t2ss_command_battleship_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Heavy Siege Dreadnought
+tech_t2ss_heavy_siege_dreadnought_1 = {
+	tier = 6
+	weight = @t2ss_tier5weight2
+	cost = @t2ss_tier6cost4
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_command_battleship_1" "tech_Dreadnought_1" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_HEAVY_SIEGE_DREADNOUGHT_TITLE"
+			desc = "TECH_UNLOCK_T2SS_HEAVY_SIEGE_DREADNOUGHT_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { 
+				has_technology = tech_t2ss_heavy_siege_dreadnought_1 
+			}
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			any_neighbor_country = {
+				has_technology = tech_t2ss_heavy_siege_dreadnought_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Tactical Destroyer
+tech_t2ss_tactical_destroyer_1 = {
+	tier = 6
+	weight = @t2ss_tier5weight2
+	cost = @t2ss_tier7cost3
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_heavy_siege_dreadnought_1" "tech_t2ss_command_destroyer_1" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_TACTICAL_DESTROYER_TITLE"
+			desc = "TECH_UNLOCK_T2SS_TACTICAL_DESTROYER_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { 
+				has_technology = tech_t2ss_tactical_destroyer_1 
+			}
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			any_neighbor_country = {
+				has_technology = tech_t2ss_tactical_destroyer_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Heavy Assault Supercarrier
+tech_t2ss_heavy_assault_supercarrier_1 = {
+	tier = 6
+	weight = @t2ss_tier5weight2
+	cost = @t2ss_tier7cost4
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_tactical_destroyer_1" "tech_supercarrier_1" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_HEAVY_ASSAULT_SUPERCARRIER_TITLE"
+			desc = "TECH_UNLOCK_T2SS_HEAVY_ASSAULT_SUPERCARRIER_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { 
+				has_technology = tech_t2ss_heavy_assault_supercarrier_1 
+			}
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			any_neighbor_country = {
+				has_technology = tech_t2ss_heavy_assault_supercarrier_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Superheavy Battleship
+tech_t2ss_superheavy_battleship_1 = {
+	tier = 6
+	weight = @t2ss_tier5weight3
+	cost = @t2ss_tier7cost5
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_heavy_assault_supercarrier_1" "tech_t2ss_tech3_ships_1" "tech_battleships" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_SUPERHEAVY_BATTLESHIP_TITLE"
+			desc = "TECH_UNLOCK_T2SS_SUPERHEAVY_BATTLESHIP_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { 
+				has_technology = tech_t2ss_superheavy_battleship_1 
+			}
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			any_neighbor_country = {
+				has_technology = tech_t2ss_superheavy_battleship_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Command Supertitan
+tech_t2ss_command_titan_1 = {
+	tier = 6
+	weight = @t2ss_tier5weight1
+	cost = @t2ss_tier7cost6
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_superheavy_battleship_1" "tech_titans" }
+	is_reverse_engineerable = yes
+	is_rare = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_COMMAND_TITAN_TITLE"
+			desc = "TECH_UNLOCK_T2SS_COMMAND_TITAN_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { 
+				has_technology = tech_t2ss_command_titan_1 
+			}
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			any_neighbor_country = {
+				has_technology = tech_t2ss_command_titan_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Strategic Command Cruiser
+tech_t2ss_strategic_command_cruiser_1 = {
+	tier = 7
+	weight = @t2ss_tier5weight3
+	cost = @t2ss_tier7cost8
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_command_titan_1" "tech_t2ss_tech4_ships_1" "tech_cruisers" "tech_StrikeCruiser_1" }
+	is_reverse_engineerable = no
+	is_rare = yes
+	is_dangerous = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_STRATEGIC_COMMAND_CRUISER_TITLE"
+			desc = "TECH_UNLOCK_T2SS_STRATEGIC_COMMAND_CRUISER_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_t2ss_strategic_command_cruiser_1 }
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			any_neighbor_country = {
+				has_technology = tech_t2ss_strategic_command_cruiser_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Force Assault Supertitan
+tech_t2ss_force_assault_supertitan_1 = {
+	tier = 7
+	weight = @t2ss_tier5weight3
+	cost = @t2ss_tier7cost9
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_t2ss_strategic_command_cruiser_1" "tech_t2ss_command_titan_1" }
+	is_reverse_engineerable = no
+	is_rare = yes
+	is_dangerous = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_FORCE_ASSAULT_SUPERTITAN_TITLE"
+			desc = "TECH_UNLOCK_T2SS_FORCE_ASSAULT_SUPERTITAN_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_t2ss_marauder_1 }
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			any_neighbor_country = {
+				has_technology = tech_t2ss_marauder_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+##Marauder
+tech_t2ss_marauder_1 = {
+	tier = 8
+	weight = @t2ss_tier5weight3
+	cost = @t2ss_tier7cost11
+	area = engineering
+	category = { voidcraft }
+	prerequisites = { "tech_battleships" "tech_t2ss_command_battleship_1" "tech_t2ss_superheavy_battleship_1" "tech_t2ss_force_assault_supertitan_1" }
+	is_reverse_engineerable = no
+	is_rare = yes
+	is_dangerous = yes
+	
+	gateway = ship
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_T2SS_MARAUDER_TITLE"
+			desc = "TECH_UNLOCK_T2SS_MARAUDER_DESC"
+		}
+	}
+	modifier = {
+		country_command_limit_add = 10
+		country_naval_cap_add = 20
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = { has_technology = tech_t2ss_marauder_1 }
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			any_neighbor_country = {
+				has_technology = tech_t2ss_marauder_1
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+# ##Marauder Tech 2 Bastion
+# tech_t2ss_tech2_bastion_1 = {
+# 	tier = 5
+# 	weight = @t2ss_tier5weight3
+# 	cost = @t2ss_tier7cost12
+# 	area = physics
+# 	category = { computing }
+# 	prerequisites = { "tech_t2ss_marauder_1" }
+# 	is_reverse_engineerable = no
+# 	is_rare = yes
+# 	is_dangerous = yes
+# 	
+# 	gateway = ship
+# 	prereqfor_desc = {
+# 		ship = {
+# 			title = "TECH_UNLOCK_T2SS_TECH2_BASTION_TITLE"
+# 			desc = "TECH_UNLOCK_T2SS_TECH2_BASTION_DESC"
+# 		}
+# 	}
+# 	weight_modifier = {
+# 		modifier = {
+# 			factor = 1.25
+# 			any_neighbor_country = { has_technology = tech_t2ss_tech2_bastion_1 }
+# 		}
+# 	}
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 1.25
+# 			any_neighbor_country = {
+# 				has_technology = tech_t2ss_tech2_bastion_1
+# 			}
+# 		}
+# 	}
+# }
+

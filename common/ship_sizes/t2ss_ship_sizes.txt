@@ -1,0 +1,380 @@
+##########################
+### FORMATION PRIORITY ###
+##########################
+@t2ss_corvette_formation = 1
+@t2ss_destroyer_formation = 2
+@t2ss_cruiser_formation = 3
+@t2ss_strikecruiser_formation = 4
+@t2ss_battlecruiser_formation = 5
+@t2ss_battleship_formation = 6
+@t2ss_dreadnought_formation = 7
+@t2ss_titan_formation = 8
+@t2ss_flagship_formation = 9
+@t2ss_carrier_formation = 11
+@t2ss_escortcarrier_formation = 10
+#############
+### SPEED ###
+#############
+@t2ss_speed0 = 0
+@t2ss_speed1 = 6
+@t2ss_speed2 = 80	# speed_slow
+@t2ss_speed3 = 90
+@t2ss_speed4 = 100	# speed_default
+@t2ss_speed5 = 120	# speed_fast
+@t2ss_speed6 = 130
+@t2ss_speed7 = 140
+@t2ss_speed8 = 160
+@t2ss_speed9 = 170	# speed_very_fast
+@t2ss_speed10 = 180
+####################
+### ACCELERATION ###
+####################
+@t2ss_acceleration0 = 0
+@t2ss_acceleration1 = 0.2
+@t2ss_acceleration2 = 0.25
+@t2ss_acceleration3 = 0.3
+@t2ss_acceleration4 = 0.35
+@t2ss_acceleration5 = 0.6
+@t2ss_acceleration6 = 0.9
+@t2ss_acceleration7 = 10
+######################
+### ROTATION SPEED ###
+######################
+@t2ss_rotation0 = 0
+@t2ss_rotation1 = 0.1
+@t2ss_rotation2 = 0.15
+@t2ss_rotation3 = 0.16
+@t2ss_rotation4 = 0.175
+@t2ss_rotation5 = 0.2
+@t2ss_rotation6 = 5
+@t2ss_rotation7 = 10
+########################
+### COLLISION RADIUS ###
+########################
+@t2ss_corvette_collision = 2
+@t2ss_destroyer_collision = 2.5
+@t2ss_cruiser_collision = 3.5
+@t2ss_battlecruiser_collision = 6
+@t2ss_battleship_collision = 6
+@t2ss_carrier_collision = 9
+@t2ss_dreadnought_collision = 9
+@t2ss_escortcarrier_collision = 10
+@t2ss_titan_collision = 12
+@t2ss_flagship_collision = 0
+##########################
+### BUILD BLOCK RADIUS ###
+##########################
+@t2ss_block_radius_none = 0
+@t2ss_block_radius_civilian = 20
+@t2ss_block_radius_military = 200
+
+######################
+### MILITARY SHIPS ###
+######################
+tactical_destroyer = {
+	formation_priority = @t2ss_destroyer_formation
+	max_speed = @t2ss_speed10
+	acceleration = @t2ss_acceleration4
+	rotation_speed = @t2ss_rotation5
+	collision_radius = @t2ss_destroyer_collision
+
+	modifier = {
+		ship_evasion_add = 35
+		ship_piracy_suppression_add = 8
+	}
+	
+	max_hitpoints = 1600
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "bow" = { locator = "part1" } "stern" = { locator = "part2" } }
+	num_target_locators = 4
+	icon_frame = 3
+	base_buildtime = 240
+	combat_disengage_chance = 1.50
+	
+	is_space_station = no
+	can_have_federation_design = yes
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
+	default_behavior = picket
+	
+	prerequisites = { "tech_t2ss_tactical_destroyer_1" }	
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	
+	resources = {
+		category = ships	
+		upkeep = {
+			energy = 6.0
+			alloys = 1.0
+		}
+		cost = {
+			energy = 400.0
+			alloys = 15.0
+		}
+	}	
+	min_upgrade_cost = { alloys = 2 }
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ai_behaviour"
+	required_component_set = "special_ship_slot"
+	# required_component_set = "t2ss_tactical_destroyer_aura"
+
+	# empire_limit = {
+	# 	base = 18
+	# 	max = 86
+	# }
+	auto_upgrade = yes
+	ai_ship_data = {
+		min = 18
+		max = 86
+	}
+}
+
+strategic_command_cruiser = {
+	formation_priority = @t2ss_battleship_formation
+	max_speed = @t2ss_speed10
+	acceleration = @t2ss_acceleration4
+	rotation_speed = @t2ss_rotation5
+	collision_radius = @t2ss_battleship_collision
+	
+	modifier = {
+		ship_evasion_add = 40
+		ship_piracy_suppression_add = 12
+	}
+	
+	max_hitpoints = 22000
+	size_multiplier = 10
+	fleet_slot_size = 10
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 4
+	icon_frame = 15
+	base_buildtime = 480
+	combat_disengage_chance = 1.0
+	
+	is_space_station = no
+	can_have_federation_design = yes
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
+	default_behavior = artillery
+	
+	prerequisites = { "tech_t2ss_strategic_command_cruiser_1" }	
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	
+	resources = {
+		category = ships
+		upkeep = {
+			energy = 36.0
+			alloys = 6.0
+		}
+		cost = {
+			energy = 3000.0
+			alloys = 300.0
+		}
+	}
+	min_upgrade_cost = { alloys = 5 }
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ai_behaviour"
+	required_component_set = "special_ship_slot"
+	required_component_set = "special_ship_slot"
+	# required_component_set = "t2ss_strategic_command_cruiser_aura"
+
+	auto_upgrade = yes
+	# empire_limit = { base = 10 max = 48 }
+	ai_ship_data = {
+		min = 10
+		max = 48
+	}
+}
+
+marauder = {
+	formation_priority = @t2ss_battleship_formation
+	max_speed = @t2ss_speed7
+	acceleration = @t2ss_acceleration3
+	rotation_speed = @t2ss_rotation4
+	collision_radius = @t2ss_battleship_collision
+	
+	modifier = {
+		ship_evasion_add = 20
+		ship_piracy_suppression_add = 10
+	}
+	
+	max_hitpoints = 104000
+	size_multiplier = 18
+	fleet_slot_size = 18
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 4
+	icon_frame = 5
+	base_buildtime = 1600
+	combat_disengage_chance = 1.0
+	
+	is_space_station = no
+	can_have_federation_design = yes
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
+	default_behavior = artillery
+	
+	prerequisites = { "tech_t2ss_marauder_1" }	
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	
+	resources = {
+		category = ships
+		upkeep = {
+			energy = 60.0
+			alloys = 20.0
+		}
+		cost = {
+			energy = 24000.0
+			alloys = 4400.0
+		}
+	}
+	min_upgrade_cost = { alloys = 8 }
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ai_behaviour"
+	required_component_set = "special_ship_slot"
+	required_component_set = "special_ship_slot"
+	# required_component_set = "t2ss_marauder_aura"
+	# required_component_set = "t2ss_marauder_core"
+
+	auto_upgrade = yes
+	# empire_limit = { base = 5 max = 24 }
+	ai_ship_data = {
+		min = 5
+		max = 24
+	}
+}
+
+force_assault_supertitan = {
+	formation_priority = @t2ss_titan_formation
+	max_speed = @t2ss_speed3
+	acceleration = @t2ss_acceleration2
+	rotation_speed = @t2ss_rotation3
+	collision_radius = @t2ss_titan_collision
+	
+	modifier = {
+		ship_evasion_add = 2
+		ship_piracy_suppression_add = 2
+	}
+	
+	max_hitpoints = 75000
+	size_multiplier = 22
+	fleet_slot_size = 22
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 4
+	icon_frame = 6
+	base_buildtime = 1300
+	combat_disengage_chance = 1.0
+	
+	is_space_station = no
+	can_have_federation_design = yes
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
+	default_behavior = artillery
+	
+	# potential_construction = {
+	# 	OR = {
+	# 		is_scope_type = starbase
+	# 		AND = {
+	# 			is_scope_type = megastructure
+	# 			OR = {
+	# 				is_megastructure_type = mega_shipyard_3
+	# 				is_megastructure_type = mega_shipyard_restored
+	# 			}
+	# 		}
+	# 	}
+	# }
+
+	# possible_construction = {
+	# 	custom_tooltip = {
+	# 		fail_text = starbase_citadel_trigger
+	# 		OR = {
+	# 			AND = {
+	# 				is_scope_type = megastructure
+	# 				OR = {
+	# 					is_megastructure_type = mega_shipyard_3
+	# 					is_megastructure_type = mega_shipyard_restored
+	# 				}
+	# 			}
+	# 			AND = {
+	# 				is_scope_type = starbase
+	# 				has_starbase_size >= starbase_citadel
+	# 			}
+	# 		}
+	# 	}
+	# 	custom_tooltip = {
+	# 		fail_text = starbase_titan_yards_trigger
+	# 		OR = {
+	# 			AND = {
+	# 				is_scope_type = megastructure
+	# 				OR = {
+	# 					is_megastructure_type = mega_shipyard_3
+	# 					is_megastructure_type = mega_shipyard_restored
+	# 				}
+	# 			}
+	# 			AND = {
+	# 				is_scope_type = starbase
+	# 				has_starbase_building = titan_yards
+	# 			}
+	# 		}
+	# 	}
+	# }
+	
+	prerequisites = { "tech_t2ss_force_assault_supertitan_1" }
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	
+	# empire_limit = {
+	# 	base = 1
+	# 	max = 36
+	# }
+
+	auto_upgrade = yes
+	ai_ship_data = {
+		min = 1
+		max = 36
+	}
+
+	resources = {
+		category = ships
+		upkeep = {
+			energy = 72.0
+			alloys = 12.0
+		}
+		cost = {
+			energy = 6000.0
+			alloys = 600.0
+		}
+	}
+	min_upgrade_cost = { alloys = 16 }
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ai_behaviour"
+	required_component_set = "special_ship_slot"
+	required_component_set = "special_ship_slot"
+	required_component_set = "special_ship_slot"
+	# required_component_set = "t2ss_force_assault_supertitan_aura"
+}

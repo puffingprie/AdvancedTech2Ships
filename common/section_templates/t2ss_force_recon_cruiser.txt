@@ -1,0 +1,485 @@
+############
+### COST ###
+############
+@cost0 = 100
+@cost1 = 150
+@cost2 = 200
+
+###########
+### BOW ###
+###########
+
+ship_section_template = {
+	key = "T2SS_FORCE_RECON_CRUISER_BOW_G2M1"
+	ship_size = StrikeCruiser
+	fits_on_slot = bow
+	entity = "StrikeCruiser_bow_M2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "medium_missile_turret"
+		locatorname = "medium_gun_01"
+	}	
+	component_slot = {
+		name = "TORPEDO_02"
+		template = "medium_missile_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "TORPEDO_03"
+		template = "invisible_missile_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 5
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 30
+			has_technology = tech_t2ss_force_recon_cruiser_1
+		}
+	}
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" }
+	resources = {
+		category = ship_sections
+		upkeep = { energy = 0.2 }
+		cost = { alloys = @cost2 }
+	}
+}
+
+ship_section_template = {
+	key = "T2SS_FORCE_RECON_CRUISER_BOW_L2M1"
+	ship_size = StrikeCruiser
+	fits_on_slot = bow
+	entity = "StrikeCruiser_bow_L1_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "invisible_large_turret"
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "large_gun_01"
+	}
+	
+	medium_utility_slots = 5
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 30
+			has_technology = tech_t2ss_force_recon_cruiser_1
+		}
+	}
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" }
+	resources = {
+		category = ship_sections
+		upkeep = { energy = 0.2 }
+		cost = { alloys = @cost2 }
+	}
+}
+
+ship_section_template = {
+	key = "T2SS_FORCE_RECON_CRUISER_BOW_M5"
+	ship_size = StrikeCruiser
+	fits_on_slot = bow
+	entity = "StrikeCruiser_bow_M2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 5
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 30
+			has_technology = tech_t2ss_force_recon_cruiser_1
+		}
+	}
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" }
+	resources = {
+		category = ship_sections
+		upkeep = { energy = 0.2 }
+		cost = { alloys = @cost2 }
+	}
+}
+
+###########
+### MID ###
+###########
+ship_section_template = {
+	key = "T2SS_FORCE_RECON_CRUISER_MID_M4S2"
+	ship_size = StrikeCruiser
+	fits_on_slot = mid
+	entity = "StrikeCruiser_mid_M2S2_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_01"
+	}
+	
+	medium_utility_slots = 6
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 30
+			has_technology = tech_t2ss_force_recon_cruiser_1
+		}
+	}
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" }
+	resources = {
+		category = ship_sections
+		upkeep = { energy = 0.2 }
+		cost = { alloys = @cost1 }
+	}
+}
+
+ship_section_template = {
+	key = "T2SS_FORCE_RECON_CRUISER_MID_S6M1"
+	ship_size = StrikeCruiser
+	fits_on_slot = mid
+	entity = "StrikeCruiser_mid_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_01"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_02"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_05"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_06"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_07"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "small_gun_01"
+	}
+	
+	medium_utility_slots = 7
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 30
+			has_technology = tech_t2ss_force_recon_cruiser_1
+		}
+	}
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" }
+	resources = {
+		category = ship_sections
+		upkeep = { energy = 0.2 }
+		cost = { alloys = @cost0 }
+	}
+}
+
+ship_section_template = {
+	key = "T2SS_FORCE_RECON_CRUISER_MID_M5"
+	ship_size = StrikeCruiser
+	fits_on_slot = mid
+	entity = "StrikeCruiser_mid_M3_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "medium_gun_03"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 4
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 30
+			has_technology = tech_t2ss_force_recon_cruiser_1
+		}
+	}
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" }
+	resources = {
+		category = ship_sections
+		upkeep = { energy = 0.2 }
+		cost = { alloys = @cost2 }
+	}
+}
+
+#############
+### STERN ###
+#############
+ship_section_template = {
+	key = "T2SS_FORCE_RECON_CRUISER_STERN_M2"
+	ship_size = StrikeCruiser
+	fits_on_slot = stern
+	entity = "StrikeCruiser_stern_M1_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "invisible_medium_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	aux_utility_slots = 2
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 30
+			has_technology = tech_t2ss_force_recon_cruiser_1
+		}
+	}
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" }
+	resources = {
+		category = ship_sections
+		upkeep = { energy = 0.2 }
+		cost = { alloys = @cost2 }
+	}
+}
+
+ship_section_template = {
+	key = "T2SS_FORCE_RECON_CRUISER_STERN_S2PD2M1"
+	ship_size = StrikeCruiser
+	fits_on_slot = stern
+	entity = "StrikeCruiser_stern_S2_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "invisible_point_defence_turret"
+		locatorname = "small_gun_01"
+	}	
+	component_slot = {
+		name = "PD_02"
+		template = "invisible_point_defence_turret"
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "PD_03"
+		template = "invisible_point_defence_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "small_gun_01"
+	}
+
+	aux_utility_slots = 3
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 30
+			has_technology = tech_t2ss_force_recon_cruiser_1
+		}
+	}
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" }
+	resources = {
+		category = ship_sections
+		upkeep = { energy = 0.2 }
+		cost = { alloys = @cost1 }
+	}
+}
+
+ship_section_template = {
+	key = "T2SS_FORCE_RECON_CRUISER_STERN_S5M1"
+	ship_size = StrikeCruiser
+	fits_on_slot = stern
+	entity = "StrikeCruiser_stern_S2_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "SMALL_GUN_05"
+		template = "invisible_small_turret"
+		locatorname = "small_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "invisible_medium_turret"
+		locatorname = "small_gun_01"
+	}
+
+	aux_utility_slots = 3
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 30
+			has_technology = tech_t2ss_force_recon_cruiser_1
+		}
+	}
+	prerequisites = { "tech_t2ss_force_recon_cruiser_1" }
+	resources = {
+		category = ship_sections
+		upkeep = { energy = 0.2 }
+		cost = { alloys = @cost1 }
+	}
+}
